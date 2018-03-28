@@ -29,6 +29,7 @@
       <source url="https://github.com/CocoaPods/Specs.git"/>
     </pods-config>
     <!-- use the latest version of a pod -->
+    <pod name="AWSCognito" />
     <pod name="AWSCognitoIdentityProvider" />
     <pod name="SHEmailValidator" />
     
@@ -43,6 +44,8 @@
 
     <header-file src="src/ios/CognitoUserPoolsPlugin.h" target-dir="CognitoUserPoolsPlugin"/>
     <source-file src="src/ios/CognitoUserPoolsPlugin.m" target-dir="CognitoUserPoolsPlugin"/>
+    <header-file src="src/ios/IdentityProviderHelper.h" target-dir="CognitoUserPoolsPlugin"/>
+    <source-file src="src/ios/IdentityProviderHelper.m" target-dir="CognitoUserPoolsPlugin"/>
   </platform>
 
 </plugin>
