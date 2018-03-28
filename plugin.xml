@@ -42,8 +42,8 @@
     <hook type="before_build" src="scripts/fixEntitlementsBuildSetting.js"/>
     <hook type="before_run" src="scripts/fixEntitlementsBuildSetting.js"/>
 
-    <header-file src="src/ios/CognitoUserPoolsPlugin.h" target-dir="CognitoUserPoolsPlugin"/>
-    <source-file src="src/ios/CognitoUserPoolsPlugin.m" target-dir="CognitoUserPoolsPlugin"/>
+    <header-file src="src/ios/CognitoUserPools.h" target-dir="CognitoUserPoolsPlugin"/>
+    <source-file src="src/ios/CognitoUserPools.m" target-dir="CognitoUserPoolsPlugin"/>
     <header-file src="src/ios/IdentityProviderHelper.h" target-dir="CognitoUserPoolsPlugin"/>
     <source-file src="src/ios/IdentityProviderHelper.m" target-dir="CognitoUserPoolsPlugin"/>
   </platform>

@@ -1,10 +1,10 @@
-#import "CognitoUserPoolsPlugin.h"
+#import "CognitoUserPools.h"
 #import "IdentityProviderHelper.h"
 
-@interface CognitoUserPoolsPlugin()
+@interface CognitoUserPools()
 @end
 
-@implementation CognitoUserPoolsPlugin
+@implementation CognitoUserPools
 
 #pragma mark Delegates
 

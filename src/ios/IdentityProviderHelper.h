@@ -25,7 +25,7 @@
 @import AWSCognito;
 @import AWSCognitoIdentityProvider;
 
-#define APP_NAME    "Cordova-App
+#define APP_NAME    "Cordova-App"
 
 typedef NS_ENUM(NSUInteger, kAuthValidation) {
     kAuthValidationNoEmail,

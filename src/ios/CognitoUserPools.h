@@ -3,7 +3,7 @@
 @import AWSCognito;
 @import AWSCognitoIdentityProvider;
 
-@interface CognitoUserPoolsPlugin : CDVPlugin
+@interface CognitoUserPools : CDVPlugin
 
 - (void)idpSetup:(CDVInvokedUrlCommand *)command;
 - (void)idpIsUserSignedIn:(CDVInvokedUrlCommand *)command;

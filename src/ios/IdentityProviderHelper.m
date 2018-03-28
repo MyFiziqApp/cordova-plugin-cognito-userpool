@@ -140,7 +140,7 @@
                 NSLog(@"Successfully authenticated the user.");
                 didRespond = YES;
                 if (completion) {
-                    completion(error);
+                    completion(nil);
                 }
             }
             return nil;
@@ -280,7 +280,7 @@
     if (self.userIsSignedIn) {
         [self.currentUser signOutAndClearLastKnownUser];
         if (completion) {
-            completion(err);
+            completion(nil);
         }
     } else if (completion) {
         // NOTE: To signify that there were no user session to logout of.
