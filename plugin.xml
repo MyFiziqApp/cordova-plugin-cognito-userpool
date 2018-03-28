@@ -3,8 +3,8 @@
         id="com.myfiziq.idp"
         version="18.1.0">
 
-  <name>CognitoUserPools</name>
-  <description>Cognito UserPool plugin</description>
+  <name>MyFiziq</name>
+  <description>AWS Cognito UserPool Cordova plugin</description>
   <repo>https://github.com/MyFiziqApp/cordova-plugin-cognito-userpool.git</repo>
   <issue>https://github.com/MyFiziqApp/cordova-plugin-cognito-userpool/issues</issue>
 
@@ -14,11 +14,22 @@
     <engine name="cordova-ios" version=">=4.4.0" />
   </engines>
 
-  <asset src="www/idp.js" target="js/idp.js"/>
+  <asset src="www/myfiziq.js" target="js/myfiziq.js"/>
 
-  <js-module src="www/idp.js" name="idp">
-    <clobbers target="idp" />
+  <js-module src="www/myfiziq.js" name="myfiziq">
+    <clobbers target="myfiziq" />
   </js-module>
+
+  <!-- <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="MyFiziq">
+        <param name="android-package" value="com.myfiziq.plugin.MyFiziq"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/MFZPlugin.java" target-dir="src/com/myfiziq/plugin/"/>
+  </platform> -->
 
   <platform name="ios">
 
@@ -34,18 +45,22 @@
     <pod name="SHEmailValidator" />
     
     <config-file target="config.xml" parent="/widget">
-      <feature name="CognitoUserPools">
-        <param name="ios-package" value="CognitoUserPools" />
+      <feature name="MyFiziq">
+        <param name="ios-package" value="MFZPlugin" />
       </feature>
     </config-file>
 
     <hook type="before_build" src="scripts/fixEntitlementsBuildSetting.js"/>
     <hook type="before_run" src="scripts/fixEntitlementsBuildSetting.js"/>
 
-    <header-file src="src/ios/CognitoUserPools.h" target-dir="CognitoUserPoolsPlugin"/>
-    <source-file src="src/ios/CognitoUserPools.m" target-dir="CognitoUserPoolsPlugin"/>
-    <header-file src="src/ios/IdentityProviderHelper.h" target-dir="CognitoUserPoolsPlugin"/>
-    <source-file src="src/ios/IdentityProviderHelper.m" target-dir="CognitoUserPoolsPlugin"/>
+    <header-file src="src/ios/MFZPlugin.h" target-dir="MyFiziqPlugin"/>
+    <source-file src="src/ios/MFZPlugin.m" target-dir="MyFiziqPlugin"/>
+    <header-file src="src/ios/IdentityProviderHelper.h" target-dir="MyFiziqPlugin"/>
+    <source-file src="src/ios/IdentityProviderHelper.m" target-dir="MyFiziqPlugin"/>
   </platform>
+
+  <!-- <platform name="wp7">
+    <source-file src="src/wp7/MFZPlugin.cs"/>
+  </platform> -->
 
 </plugin>

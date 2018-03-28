@@ -1,7 +1,7 @@
 {
   "name": "com.myfiziq.idp",
   "version": "18.1.0",
-  "description": "Cognito UserPool plugin",
+  "description": "AWS Cognito UserPool Cordova plugin",
   "cordova": {
     "id": "com.myfiziq.idp",
     "platforms": [

@@ -3,7 +3,7 @@
 @import AWSCognito;
 @import AWSCognitoIdentityProvider;
 
-@interface CognitoUserPools : CDVPlugin
+@interface MFZPlugin : CDVPlugin <MyFiziqSDKDelegate>
 
 - (void)idpSetup:(CDVInvokedUrlCommand *)command;
 - (void)idpIsUserSignedIn:(CDVInvokedUrlCommand *)command;

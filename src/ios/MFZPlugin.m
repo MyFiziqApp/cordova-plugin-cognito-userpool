@@ -1,10 +1,10 @@
-#import "CognitoUserPools.h"
+#import "MFZPlugin.h"
 #import "IdentityProviderHelper.h"
 
-@interface CognitoUserPools()
+@interface MFZPlugin()
 @end
 
-@implementation CognitoUserPools
+@implementation MFZPlugin
 
 #pragma mark Delegates
 
