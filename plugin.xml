@@ -1,66 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="com.myfiziq.idp"
-        version="18.1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.myfiziq.idp" 
+        version="1.0.0" 
+        xmlns="http://apache.org/cordova/ns/plugins/1.0">
 
-  <name>MyFiziq</name>
-  <description>AWS Cognito UserPool Cordova plugin</description>
-  <repo>https://github.com/MyFiziqApp/cordova-plugin-cognito-userpool.git</repo>
-  <issue>https://github.com/MyFiziqApp/cordova-plugin-cognito-userpool/issues</issue>
+    <name>CognitoUserPool</name>
+    <description>AWS Cognito UserPool Cordova plugin</description>
+    <repo>https://github.com/MyFiziqApp/cordova-plugin-cognito-userpool.git</repo>
+    <issue>https://github.com/MyFiziqApp/cordova-plugin-cognito-userpool/issues</issue>
 
-  <engines>
+    <engines>
     <engine name="cordova" version=">=7.0.0"/>
     <engine name="cordova-android" version=">=6.3.0" />
     <engine name="cordova-ios" version=">=4.4.0" />
-  </engines>
+    </engines>
 
-  <asset src="www/myfiziq.js" target="js/myfiziq.js"/>
+    <asset src="www/idp.js" target="js/idp.js"/>
 
-  <js-module src="www/myfiziq.js" name="myfiziq">
-    <clobbers target="myfiziq" />
-  </js-module>
+    <js-module name="idp" src="www/idp.js">
+        <clobbers target="idp" />
+    </js-module>
 
-  <!-- <platform name="android">
-
-    <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="MyFiziq">
-        <param name="android-package" value="com.myfiziq.plugin.MyFiziq"/>
-      </feature>
-    </config-file>
-
-    <source-file src="src/android/MFZPlugin.java" target-dir="src/com/myfiziq/plugin/"/>
-  </platform> -->
-
-  <platform name="ios">
-
-    <dependency id="cordova-plugin-cocoapod-support"/>
-    <!-- set minimum ios version and enable use_frameworks! -->
-    <pods-config ios-min-version="11.2" use-frameworks="true">
-      <!-- add private spec sources -->
-      <source url="https://github.com/CocoaPods/Specs.git"/>
-    </pods-config>
-    <!-- use the latest version of a pod -->
-    <pod name="AWSCognito" />
-    <pod name="AWSCognitoIdentityProvider" />
-    <pod name="SHEmailValidator" />
+    <platform name="ios">
+        <dependency id="cordova-plugin-cocoapod-support"/>
+        <!-- set minimum ios version and enable use_frameworks! -->
+        <pods-config ios-min-version="11.2" use-frameworks="true">
+            <!-- add private spec sources -->
+            <source url="https://github.com/CocoaPods/Specs.git"/>
+        </pods-config>
+        <!-- use the latest version of a pod -->
+        <pod name="AWSCognito" />
+        <pod name="AWSCognitoIdentityProvider" />
+        <pod name="SHEmailValidator" />
     
-    <config-file target="config.xml" parent="/widget">
-      <feature name="MyFiziq">
-        <param name="ios-package" value="MFZPlugin" />
-      </feature>
-    </config-file>
+        <config-file target="config.xml" parent="/widget">
+        <feature name="CognitoUserPool">
+            <param name="ios-package" value="CognitoUserPool" />
+        </feature>
+        </config-file>
 
     <hook type="before_build" src="scripts/fixEntitlementsBuildSetting.js"/>
     <hook type="before_run" src="scripts/fixEntitlementsBuildSetting.js"/>
 
-    <header-file src="src/ios/MFZPlugin.h" target-dir="MyFiziqPlugin"/>
-    <source-file src="src/ios/MFZPlugin.m" target-dir="MyFiziqPlugin"/>
-    <header-file src="src/ios/IdentityProviderHelper.h" target-dir="MyFiziqPlugin"/>
-    <source-file src="src/ios/IdentityProviderHelper.m" target-dir="MyFiziqPlugin"/>
+    <header-file src="src/ios/CognitoUserPool.h" target-dir="CognitoUserPoolPlugin"/>
+    <source-file src="src/ios/CognitoUserPool.m" target-dir="CognitoUserPoolPlugin"/>
+    <header-file src="src/ios/IdentityProviderHelper.h" target-dir="CognitoUserPoolPlugin"/>
+    <source-file src="src/ios/IdentityProviderHelper.m" target-dir="CognitoUserPoolPlugin"/>
   </platform>
-
-  <!-- <platform name="wp7">
-    <source-file src="src/wp7/MFZPlugin.cs"/>
-  </platform> -->
 
 </plugin>

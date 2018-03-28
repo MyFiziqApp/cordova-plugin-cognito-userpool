@@ -1,6 +1,6 @@
 {
   "name": "com.myfiziq.idp",
-  "version": "18.1.0",
+  "version": "1.0.0",
   "description": "AWS Cognito UserPool Cordova plugin",
   "cordova": {
     "id": "com.myfiziq.idp",
