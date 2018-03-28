@@ -1,0 +1,39 @@
+{
+  "name": "com.myfiziq.idp",
+  "version": "18.1.0",
+  "description": "Cognito UserPool plugin",
+  "cordova": {
+    "id": "com.myfiziq.idp",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyFiziqApp/cordova-plugin-cognito-userpool.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=7.0.0"
+    },
+    {
+      "name": "cordova-android",
+      "version": ">=6.3.0"
+    },
+    {
+      "name": "cordova-ios",
+      "version": ">=4.4.0"
+    }
+  ],
+  "author": "MyFiziq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MyFiziqApp/cordova-plugin-cognito-userpool/issues"
+  },
+  "homepage": "https://github.com/MyFiziqApp/cordova-plugin-cognito-userpool#readme"
+}
