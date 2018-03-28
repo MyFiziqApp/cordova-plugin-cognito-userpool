@@ -43,8 +43,8 @@
 
     <header-file src="src/ios/CognitoUserPool.h" target-dir="CognitoUserPoolPlugin"/>
     <source-file src="src/ios/CognitoUserPool.m" target-dir="CognitoUserPoolPlugin"/>
-    <!-- <header-file src="src/ios/IdentityProviderHelper.h" target-dir="CognitoUserPoolPlugin"/>
-    <source-file src="src/ios/IdentityProviderHelper.m" target-dir="CognitoUserPoolPlugin"/> -->
+    <header-file src="src/ios/IdentityProviderHelper.h" target-dir="CognitoUserPoolPlugin"/>
+    <source-file src="src/ios/IdentityProviderHelper.m" target-dir="CognitoUserPoolPlugin"/>
   </platform>
 
 </plugin>
